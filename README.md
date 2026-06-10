@@ -9,3 +9,5 @@ Se rappresenti un'azienda o sei uno sviluppatore che desidera integrare questo c
 In questo caso, è necessario acquistare una **Licenza Commerciale** separata. La licenza commerciale ti libera dagli obblighi dell'open source.
 
 Per richiedere una licenza commerciale o per proposte di partnership, contattami all'indirizzo: goran.joc01@gmail.com
+
+Nota per i contributori: Inviando una Pull Request a questo repository, accetti implicitamente di cedere i diritti commerciali del codice inviato al proprietario del repository, permettendo così il mantenimento del modello Dual License.
