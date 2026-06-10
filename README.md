@@ -1,13 +1,13 @@
-## Licenza e Uso Commerciale (Dual License)
+## License and Commercial Use (Dual License)
 
-Questo software è orgogliosamente rilasciato sotto licenza **GNU GPLv3**. 
-Ciò significa che sei libero di scaricare, studiare, modificare e condividere questo codice gratuitamente, **a condizione che** anche i tuoi progetti derivati siano open source e rilasciati sotto la stessa licenza GPLv3.
+This software is proudly released under the **GNU GPLv3** license. 
+This means you are free to download, study, modify, and share this code for free, **provided that** your derivative projects are also open source and released under the same GPLv3 license.
 
-**Hai bisogno di chiudere il codice?**
-Se rappresenti un'azienda o sei uno sviluppatore che desidera integrare questo client (o parti di esso) all'interno di un prodotto commerciale, proprietario o closed-source (dove non puoi o non vuoi rendere pubblico il tuo codice sorgente), le regole della GPLv3 **non** te lo consentono.
+**Need to keep your code closed?**
+If you represent a company or are a developer wishing to integrate this client (or parts of it) into a commercial, proprietary, or closed-source product (where you cannot or do not want to make your source code public), the rules of GPLv3 **do not** allow you to do so.
 
-In questo caso, è necessario acquistare una **Licenza Commerciale** separata. La licenza commerciale ti libera dagli obblighi dell'open source.
+In this case, you must purchase a separate **Commercial License**. The commercial license frees you from open-source obligations.
 
-Per richiedere una licenza commerciale o per proposte di partnership, contattami all'indirizzo: goran.joc01@gmail.com
+To request a commercial license or for partnership proposals, contact me at: **goran.joc01@gmail.com**
 
-Nota per i contributori: Inviando una Pull Request a questo repository, accetti implicitamente di cedere i diritti commerciali del codice inviato al proprietario del repository, permettendo così il mantenimento del modello Dual License.
+**Note for contributors:** By submitting a Pull Request to this repository, you implicitly agree to transfer the commercial rights of the submitted code to the repository owner, thus allowing the maintenance of the Dual License model.
