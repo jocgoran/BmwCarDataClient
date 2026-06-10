@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ==================== NAVIGATION (MainWindow) ==================== -->
+  <data name="Nav_Account" xml:space="preserve">
+    <value>1. BMW Račun &amp; Auth</value>
+  </data>
+  <data name="Nav_Dashboard" xml:space="preserve">
+    <value>2. Nadzorna Ploča Telemetrije</value>
+  </data>
+  <data name="Nav_VehicleInfo" xml:space="preserve">
+    <value>3. Podaci o Vozilu</value>
+  </data>
+  <data name="Nav_Containers" xml:space="preserve">
+    <value>Admin Kontejnera (Postavljanje)</value>
+  </data>
+
+  <!-- ==================== ACCOUNT VIEW ==================== -->
+  <data name="Account_Step1_Header" xml:space="preserve">
+    <value>Korak 1: Inicijalizacija Device Flow-a</value>
+  </data>
+  <data name="Account_ClientId" xml:space="preserve">
+    <value>Client ID</value>
+  </data>
+  <data name="Account_Vin" xml:space="preserve">
+    <value>VIN (Broj šasije)</value>
+  </data>
+  <data name="Account_GenerateCode" xml:space="preserve">
+    <value>🚀 1. GENERIRAJ KOD UREĐAJA</value>
+  </data>
+  <data name="Account_Step2_Header" xml:space="preserve">
+    <value>Korak 2: Registracija i autorizacija na BMW portalu</value>
+  </data>
+  <data name="Account_UserCodeLabel" xml:space="preserve">
+    <value>Korisnički kod za kopiranje:</value>
+  </data>
+  <data name="Account_CopyCode" xml:space="preserve">
+    <value>Kopiraj kod</value>
+  </data>
+  <data name="Account_PortalUrlHeader" xml:space="preserve">
+    <value>BMW verifikacijski link (Prilagodljiv za US/EU regiju):</value>
+  </data>
+  <data name="Account_OpenPortal" xml:space="preserve">
+    <value>🌐 2. OTVORI BMW PORTAL</value>
+  </data>
+  <data name="Account_Step3_Header" xml:space="preserve">
+    <value>Korak 3: Dohvati API pristupni token</value>
+  </data>
+  <data name="Account_RequestToken" xml:space="preserve">
+    <value>🔐 3. ZATRAŽI PRISTUPNI TOKEN</value>
+  </data>
+  <data name="Account_ServerResponse" xml:space="preserve">
+    <value>Detalji odgovora poslužitelja (HTTP status &amp; Payload):</value>
+  </data>
+
+  <!-- ==================== DASHBOARD VIEW ==================== -->
+  <data name="Dashboard_Title" xml:space="preserve">
+    <value>Nadzorna Ploča Telemetrije Uživo</value>
+  </data>
+  <data name="Dashboard_MqttStatus" xml:space="preserve">
+    <value>MQTT Status</value>
+  </data>
+  <data name="Dashboard_YourBmw" xml:space="preserve">
+    <value>Vaš BMW</value>
+  </data>
+  <data name="Dashboard_LiveStreamTitle" xml:space="preserve">
+    <value>Pokreni kontinuirani tok podataka (Uživo)</value>
+  </data>
+  <data name="Dashboard_StreamingInfo" xml:space="preserve">
+    <value>Dohvaća početno stanje i ostaje stalno povezan putem MQTT-a. Prikazuje u stvarnom vremenu svaki događaj vozila (npr. paljenje, kretanje, otvaranje vrata).</value>
+  </data>
+  <data name="Dashboard_StartStreaming" xml:space="preserve">
+    <value>Učitaj početno stanje &amp; Pokreni streaming uživo</value>
+  </data>
+  <data name="Dashboard_LicenseHeader" xml:space="preserve">
+    <value>Licenca &amp; Krediti</value>
+  </data>
+  <data name="Dashboard_TrialRemaining" xml:space="preserve">
+    <value>Preostali probni zahtjevi:</value>
+  </data>
+  <data name="Dashboard_PremiumActive" xml:space="preserve">
+    <value>✓ Premium aktivan – Neograničeni zahtjevi</value>
+  </data>
+  <data name="Dashboard_PremiumTokenHeader" xml:space="preserve">
+    <value>Premium Token (primljen e-poštom)</value>
+  </data>
+  <data name="Dashboard_BuyToken" xml:space="preserve">
+    <value>Kupi Token</value>
+  </data>
+  <data name="Dashboard_BuyTokenTooltip" xml:space="preserve">
+    <value>Kliknite za kupnju neograničenog tokena online</value>
+  </data>
+  <data name="Dashboard_PackagesTitle" xml:space="preserve">
+    <value>Vaši Telematski Paketi (Na zahtjev)</value>
+  </data>
+  <data name="Dashboard_PackagesInfo" xml:space="preserve">
+    <value>Upitajte specifične funkcije na zahtjev putem REST API-ja. Aktivacija trenutno preuzima podatke paketa i troši vaše kredite.</value>
+  </data>
+  <data name="Dashboard_SecurityPackage" xml:space="preserve">
+    <value>Paket Sigurnost &amp; Vrata</value>
+  </data>
+  <data name="Dashboard_SecurityPackageDesc" xml:space="preserve">
+    <value>Pratite stanje vrata, prozora i alarma.</value>
+  </data>
+  <data name="Dashboard_ClimatePackage" xml:space="preserve">
+    <value>Paket Klima &amp; Udobnost</value>
+  </data>
+  <data name="Dashboard_ClimatePackageDesc" xml:space="preserve">
+    <value>Provjerite temperature, klimu i sjedala.</value>
+  </data>
+  <data name="Dashboard_DrivetrainPackage" xml:space="preserve">
+    <value>Paket Motor &amp; Domet</value>
+  </data>
+  <data name="Dashboard_DrivetrainPackageDesc" xml:space="preserve">
+    <value>Stanje baterije, preostali domet i kilometraža.</value>
+  </data>
+  <data name="Dashboard_MaintenancePackage" xml:space="preserve">
+    <value>Paket Održavanje &amp; CBS</value>
+  </data>
+  <data name="Dashboard_MaintenancePackageDesc" xml:space="preserve">
+    <value>Rokovi za ulje, kočnice, kočionu tekućinu i check control.</value>
+  </data>
+  <data name="Toggle_On" xml:space="preserve">
+    <value>Aktivan</value>
+  </data>
+  <data name="Toggle_Off" xml:space="preserve">
+    <value>Isključen</value>
+  </data>
+
+  <!-- ==================== VEHICLE INFO VIEW ==================== -->
+  <data name="VehicleInfo_Title" xml:space="preserve">
+    <value>Statički podaci vozila (Osnovni podaci)</value>
+  </data>
+  <data name="VehicleInfo_Info" xml:space="preserve">
+    <value>Ova stranica dohvaća osnovne matične i tehničke podatke vašeg vozila (npr. boja, model, godina) registrirane na BMW poslužiteljima.</value>
+  </data>
+  <data name="VehicleInfo_Download" xml:space="preserve">
+    <value>Preuzmi podatke vozila</value>
+  </data>
+
+  <!-- ==================== CONTAINERS VIEW ==================== -->
+  <data name="Containers_Title" xml:space="preserve">
+    <value>Upravljanje BMW kontejnerima &amp; Dijagnostika</value>
+  </data>
+  <data name="Containers_Section1_Header" xml:space="preserve">
+    <value>1. Trenutni kontejneri &amp; Čišćenje (Rješenje CU-124)</value>
+  </data>
+  <data name="Containers_GetActive" xml:space="preserve">
+    <value>Dohvati aktivne kontejnere</value>
+  </data>
+  <data name="Containers_DeleteAll" xml:space="preserve">
+    <value>Obriši sve kontejnere</value>
+  </data>
+  <data name="Containers_Section2_Header" xml:space="preserve">
+    <value>2. Postavi nove kontejnere (CSV sinkronizacija)</value>
+  </data>
+  <data name="Containers_Section2_Info" xml:space="preserve">
+    <value>Postavi kontejnere pretplate na podatke na BMW API čitajući CSV datoteku.</value>
+  </data>
+  <data name="Containers_Deploy" xml:space="preserve">
+    <value>Kreiraj 10 kontejnera sa zadanim grupiranjima</value>
+  </data>
+  <data name="Containers_Section3_Header" xml:space="preserve">
+    <value>3. Smart Maintenance (Dijagnostika guma)</value>
+  </data>
+  <data name="Containers_GetSmartMaintenance" xml:space="preserve">
+    <value>Dohvati Smart Maintenance dijagnostiku</value>
+  </data>
+
+  <!-- ==================== SETTINGS VIEW ==================== -->
+  <data name="Settings_Title" xml:space="preserve">
+    <value>Postavke aplikacije</value>
+  </data>
+  <data name="Settings_ThemeHeader" xml:space="preserve">
+    <value>Izgled (Tema)</value>
+  </data>
+  <data name="Settings_ThemeDesc" xml:space="preserve">
+    <value>Odaberite vizualnu temu sučelja.</value>
+  </data>
+  <data name="Settings_ThemeLight" xml:space="preserve">
+    <value>☀️ Svijetlo (Light)</value>
+  </data>
+  <data name="Settings_ThemeDark" xml:space="preserve">
+    <value>🌙 Tamno (Dark)</value>
+  </data>
+  <data name="Settings_ThemeSystem" xml:space="preserve">
+    <value>💻 Sustavski zadano</value>
+  </data>
+  <data name="Settings_LanguageHeader" xml:space="preserve">
+    <value>Jezik</value>
+  </data>
+  <data name="Settings_LanguageDesc" xml:space="preserve">
+    <value>Odaberite jezik prikaza.</value>
+  </data>
+
+</root>

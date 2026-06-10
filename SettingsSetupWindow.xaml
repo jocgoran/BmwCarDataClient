@@ -1,0 +1,59 @@
+<Window x:Class="BmwCarDataClient.SettingsSetupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        Title="Prima Configurazione - BMW Car Data" Height="650" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Benvenuto in BMW Car Data Client!" FontSize="24" FontWeight="SemiBold" Margin="0,0,0,10"/>
+        <TextBlock Text="Essendo il primo avvio, inserisci i dati di configurazione necessari per collegarti alle API di BMW. I dati verranno salvati localmente in appsettings.json." 
+                   TextWrapping="Wrap" Margin="0,0,0,20" Grid.Row="0" VerticalAlignment="Bottom"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="0,0,10,0">
+                <TextBlock Text="Dati Base" FontWeight="Bold" Margin="0,10,0,5"/>
+                
+                <TextBlock Text="Client ID"/>
+                <TextBox x:Name="txtClientId" Margin="0,0,0,10" ui:ControlHelper.PlaceholderText="Inserisci il tuo Client ID"/>
+
+                <TextBlock Text="VIN (Numero Telaio)"/>
+                <TextBox x:Name="txtVin" Margin="0,0,0,10" ui:ControlHelper.PlaceholderText="Inserisci il VIN del veicolo"/>
+
+                <TextBlock Text="MQTT Broker e Streaming" FontWeight="Bold" Margin="0,20,0,5"/>
+
+                <TextBlock Text="Broker Host"/>
+                <TextBox x:Name="txtBroker" Text="customer.streaming-cardata.bmwgroup.com" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Broker Port"/>
+                <TextBox x:Name="txtPort" Text="9000" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Username (MQTT)"/>
+                <TextBox x:Name="txtUsername" Margin="0,0,0,10" ui:ControlHelper.PlaceholderText="Es: GCID o stringa fornita dal portale"/>
+
+                <TextBlock Text="Topic (MQTT)"/>
+                <TextBox x:Name="txtTopic" Margin="0,0,0,10" ui:ControlHelper.PlaceholderText="Es: customers/vehicles/WBA.../stream"/>
+
+                <TextBlock Text="Impostazioni API" FontWeight="Bold" Margin="0,20,0,5"/>
+                <TextBlock Text="Questi valori solitamente non necessitano di modifiche." FontStyle="Italic" Margin="0,0,0,5"/>
+
+                <TextBlock Text="Auth Endpoint"/>
+                <TextBox x:Name="txtAuthEndpoint" Text="https://customer.bmwgroup.com" Margin="0,0,0,10"/>
+
+                <TextBlock Text="REST API Endpoint"/>
+                <TextBox x:Name="txtRestApiEndpoint" Text="https://api-cardata.bmwgroup.com" Margin="0,0,0,10"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="Esci" Width="100" Margin="0,0,10,0" Click="BtnCancel_Click"/>
+            <Button Content="Salva e Continua" Width="150" Style="{StaticResource AccentButtonStyle}" Click="BtnSave_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

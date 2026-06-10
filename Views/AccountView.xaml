@@ -1,0 +1,81 @@
+<UserControl x:Class="BmwCarDataClient.Views.AccountView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.modernwpf.com/2019"
+             xmlns:loc="clr-namespace:BmwCarDataClient.Localization"
+             Margin="20">
+    <ScrollViewer VerticalScrollBarVisibility="Visible">
+        <StackPanel>
+            
+            <GroupBox Header="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_Step1_Header]}" IsEnabled="{Binding IsStep1Active}" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <TextBox ui:ControlHelper.Header="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_ClientId]}" Text="{Binding ClientId, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" />
+                    <TextBox ui:ControlHelper.Header="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_Vin]}" Text="{Binding Vin, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" />
+                    
+                    <Button Content="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_GenerateCode]}" 
+                            Command="{Binding StartDeviceFlowCommand}" 
+                            Style="{StaticResource AccentButtonStyle}" 
+                            Height="45" 
+                            HorizontalAlignment="Stretch" 
+                            FontSize="16" 
+                            FontWeight="Bold" 
+                            Margin="0,10,0,10"/>
+                    
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
+                        <Ellipse Width="12" Height="12" Fill="{Binding Step1StatusColor}" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBlock Text="{Binding Step1StatusMessage}" VerticalAlignment="Center" FontWeight="Bold"/>
+                    </StackPanel>
+                    <TextBlock Text="{Binding PollingStatusMessage}" Foreground="Gray" TextWrapping="Wrap" FontSize="12"/>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_Step2_Header]}" IsEnabled="{Binding IsStep2Active}" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <TextBlock Text="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_UserCodeLabel]}"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Background="#F3F3F3" FontSize="18" FontWeight="SemiBold" IsReadOnly="True" Text="{Binding UserCode}" VerticalAlignment="Center"/>
+                        <Button Command="{Binding CopyCodeCommand}" Content="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_CopyCode]}" Grid.Column="1" Height="32" Margin="5,0,0,0"/>
+                    </Grid>
+                    
+                    <!-- Editable Regional Link moved here -->
+                    <TextBox Margin="0,10,0,0" Text="{Binding PortalUrlTemplate, UpdateSourceTrigger=PropertyChanged}" ToolTip="Usa {0} dove l'app deve iniettare lo user_code" ui:ControlHelper.Header="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_PortalUrlHeader]}"/>
+                    
+                    <!-- Auto-open Button -->
+                    <Button Content="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_OpenPortal]}" 
+                            Command="{Binding OpenBmwPortalCommand}" 
+                            Style="{StaticResource AccentButtonStyle}" 
+                            Height="45" 
+                            HorizontalAlignment="Stretch" 
+                            FontSize="16" 
+                            FontWeight="Bold" 
+                            Margin="0,10,0,0"/>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_Step3_Header]}" IsEnabled="{Binding IsStep3Active}">
+                <StackPanel Margin="10">
+                    <Button Content="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_RequestToken]}" 
+                            Command="{Binding RequestTokenCommand}" 
+                            Style="{StaticResource AccentButtonStyle}" 
+                            Height="45" 
+                            HorizontalAlignment="Stretch" 
+                            FontSize="16" 
+                            FontWeight="Bold" />
+                    
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
+                        <Ellipse Width="12" Height="12" Fill="{Binding Step3StatusColor}" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBlock Text="{Binding Step3StatusMessage}" VerticalAlignment="Center" FontWeight="Bold"/>
+                    </StackPanel>
+                    
+                    <TextBlock Text="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Account_ServerResponse]}" Margin="0,10,0,10" />
+                    <TextBox Text="{Binding TokenStatusMessage}" IsReadOnly="True" TextWrapping="Wrap" MinHeight="80" AcceptsReturn="True" FontFamily="Consolas" Background="#F3F3F3"/>
+                </StackPanel>
+            </GroupBox>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,5 @@
+vehicle.status.serviceTime.inspectionDateLegal
+Questo valore indica quando va effettuata la prossima ispezione. Viene rappresentato di volta in volta come data, ad esempio 30.09.2018 23:00 UTC.
+
+vehicle.electronicControlUnit.diagnosticTroubleCodes.raw
+La memoria errori fornisce informazioni su potenziali anomalie o guasti tecnici del veicolo. Queste informazioni sono pensate per le officine. Le anomalie rilevanti per il cliente, che vengono mostrate al conducente nel veicolo, sono riportate nell'elemento CarData "Messaggi Check Control". I relativi dettagli sono documentati nel manuale del veicolo.

@@ -1,0 +1,43 @@
+<UserControl Margin="20" x:Class="BmwCarDataClient.Views.SettingsView" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:ui="http://schemas.modernwpf.com/2019" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:BmwCarDataClient.Localization">
+
+    <StackPanel Margin="0,0,0,20">
+        
+        <TextBlock FontSize="24" FontWeight="SemiBold" Text="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Settings_Title]}" Margin="0,0,0,20"/>
+
+        <!-- SEZIONE TEMA -->
+        <GroupBox Header="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Settings_ThemeHeader]}" Margin="0,0,0,20">
+            <StackPanel Margin="10">
+                <TextBlock Foreground="Gray" Text="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Settings_ThemeDesc]}" Margin="0,0,0,10"/>
+                <ComboBox SelectedIndex="{Binding SelectedThemeIndex}" Width="250">
+                    <ComboBoxItem Content="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Settings_ThemeLight]}"/>
+                    <ComboBoxItem Content="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Settings_ThemeDark]}"/>
+                    <ComboBoxItem Content="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Settings_ThemeSystem]}"/>
+                </ComboBox>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- SEZIONE LINGUA -->
+        <GroupBox Header="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Settings_LanguageHeader]}">
+            <StackPanel Margin="10">
+                <TextBlock Foreground="Gray" Text="{Binding Source={x:Static loc:TranslationSource.Instance}, Path=[Settings_LanguageDesc]}" Margin="0,0,0,10"/>
+                <ComboBox SelectedIndex="{Binding SelectedLanguageIndex}" Width="250">
+                    <ComboBoxItem Content="🇮🇹 Italiano"/>
+                    <ComboBoxItem Content="🇬🇧 English"/>
+                    <ComboBoxItem Content="🇩🇪 Deutsch"/>
+                    <ComboBoxItem Content="🇫🇷 Français"/>
+                    <ComboBoxItem Content="🇪🇸 Español (Mondiale)"/>
+                    <ComboBoxItem Content="🇵🇹 Português (Brasil/PT)"/>
+                    <ComboBoxItem Content="🇵🇱 Polski"/>
+                    <ComboBoxItem Content="🇭🇷 Hrvatski"/>
+                    <ComboBoxItem Content="🇨🇳 中文 (Chinese - Globale)"/>
+                </ComboBox>
+                <TextBlock Text="{Binding LanguageStatusMessage}" Foreground="#00AA00" FontWeight="Bold" Margin="0,10,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+    </StackPanel>
+</UserControl>

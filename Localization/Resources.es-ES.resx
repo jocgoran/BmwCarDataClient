@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ==================== NAVIGATION (MainWindow) ==================== -->
+  <data name="Nav_Account" xml:space="preserve">
+    <value>1. Cuenta BMW &amp; Auth</value>
+  </data>
+  <data name="Nav_Dashboard" xml:space="preserve">
+    <value>2. Panel de Telemetría</value>
+  </data>
+  <data name="Nav_VehicleInfo" xml:space="preserve">
+    <value>3. Datos del Vehículo</value>
+  </data>
+  <data name="Nav_Containers" xml:space="preserve">
+    <value>Admin Contenedores (Config.)</value>
+  </data>
+
+  <!-- ==================== ACCOUNT VIEW ==================== -->
+  <data name="Account_Step1_Header" xml:space="preserve">
+    <value>Paso 1: Inicialización del Device Flow</value>
+  </data>
+  <data name="Account_ClientId" xml:space="preserve">
+    <value>Client ID</value>
+  </data>
+  <data name="Account_Vin" xml:space="preserve">
+    <value>VIN (Número de chasis)</value>
+  </data>
+  <data name="Account_GenerateCode" xml:space="preserve">
+    <value>🚀 1. GENERAR CÓDIGO DE DISPOSITIVO</value>
+  </data>
+  <data name="Account_Step2_Header" xml:space="preserve">
+    <value>Paso 2: Registro y Autorización en el Portal BMW</value>
+  </data>
+  <data name="Account_UserCodeLabel" xml:space="preserve">
+    <value>Código de usuario para copiar:</value>
+  </data>
+  <data name="Account_CopyCode" xml:space="preserve">
+    <value>Copiar código</value>
+  </data>
+  <data name="Account_PortalUrlHeader" xml:space="preserve">
+    <value>Enlace de verificación BMW (Editable para región US/EU):</value>
+  </data>
+  <data name="Account_OpenPortal" xml:space="preserve">
+    <value>🌐 2. ABRIR PORTAL BMW</value>
+  </data>
+  <data name="Account_Step3_Header" xml:space="preserve">
+    <value>Paso 3: Obtener Token de Acceso API</value>
+  </data>
+  <data name="Account_RequestToken" xml:space="preserve">
+    <value>🔐 3. SOLICITAR TOKEN DE ACCESO</value>
+  </data>
+  <data name="Account_ServerResponse" xml:space="preserve">
+    <value>Detalles de respuesta del servidor (Estado HTTP &amp; Payload):</value>
+  </data>
+
+  <!-- ==================== DASHBOARD VIEW ==================== -->
+  <data name="Dashboard_Title" xml:space="preserve">
+    <value>Panel de Telemetría en Vivo</value>
+  </data>
+  <data name="Dashboard_MqttStatus" xml:space="preserve">
+    <value>Estado MQTT</value>
+  </data>
+  <data name="Dashboard_YourBmw" xml:space="preserve">
+    <value>Tu BMW</value>
+  </data>
+  <data name="Dashboard_LiveStreamTitle" xml:space="preserve">
+    <value>Iniciar flujo de datos continuo (En vivo)</value>
+  </data>
+  <data name="Dashboard_StreamingInfo" xml:space="preserve">
+    <value>Obtiene el estado inicial y permanece conectado permanentemente vía MQTT. Muestra en tiempo real cada evento del vehículo (ej. encendido, movimiento, apertura de puertas).</value>
+  </data>
+  <data name="Dashboard_StartStreaming" xml:space="preserve">
+    <value>Cargar estado inicial &amp; Iniciar streaming en vivo</value>
+  </data>
+  <data name="Dashboard_LicenseHeader" xml:space="preserve">
+    <value>Licencia &amp; Créditos</value>
+  </data>
+  <data name="Dashboard_TrialRemaining" xml:space="preserve">
+    <value>Solicitudes de prueba restantes:</value>
+  </data>
+  <data name="Dashboard_PremiumActive" xml:space="preserve">
+    <value>✓ Premium activo – Solicitudes ilimitadas</value>
+  </data>
+  <data name="Dashboard_PremiumTokenHeader" xml:space="preserve">
+    <value>Token Premium (recibido por email)</value>
+  </data>
+  <data name="Dashboard_BuyToken" xml:space="preserve">
+    <value>Comprar Token</value>
+  </data>
+  <data name="Dashboard_BuyTokenTooltip" xml:space="preserve">
+    <value>Haz clic para comprar el token ilimitado en línea</value>
+  </data>
+  <data name="Dashboard_PackagesTitle" xml:space="preserve">
+    <value>Tus Paquetes Telemáticos (Bajo demanda)</value>
+  </data>
+  <data name="Dashboard_PackagesInfo" xml:space="preserve">
+    <value>Consulta funciones específicas bajo demanda vía API REST. La activación descarga instantáneamente los datos del paquete y consume tus créditos.</value>
+  </data>
+  <data name="Dashboard_SecurityPackage" xml:space="preserve">
+    <value>Paquete Seguridad &amp; Puertas</value>
+  </data>
+  <data name="Dashboard_SecurityPackageDesc" xml:space="preserve">
+    <value>Monitorizar el estado de puertas, ventanas y alarmas.</value>
+  </data>
+  <data name="Dashboard_ClimatePackage" xml:space="preserve">
+    <value>Paquete Clima &amp; Confort</value>
+  </data>
+  <data name="Dashboard_ClimatePackageDesc" xml:space="preserve">
+    <value>Verificar temperaturas, aire acondicionado y asientos.</value>
+  </data>
+  <data name="Dashboard_DrivetrainPackage" xml:space="preserve">
+    <value>Paquete Motor &amp; Autonomía</value>
+  </data>
+  <data name="Dashboard_DrivetrainPackageDesc" xml:space="preserve">
+    <value>Estado de batería, autonomía restante y kilometraje.</value>
+  </data>
+  <data name="Dashboard_MaintenancePackage" xml:space="preserve">
+    <value>Paquete Mantenimiento &amp; CBS</value>
+  </data>
+  <data name="Dashboard_MaintenancePackageDesc" xml:space="preserve">
+    <value>Vencimientos de aceite, frenos, líquido de frenos y check control.</value>
+  </data>
+  <data name="Toggle_On" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="Toggle_Off" xml:space="preserve">
+    <value>Apagado</value>
+  </data>
+
+  <!-- ==================== VEHICLE INFO VIEW ==================== -->
+  <data name="VehicleInfo_Title" xml:space="preserve">
+    <value>Datos estáticos del vehículo (Datos básicos)</value>
+  </data>
+  <data name="VehicleInfo_Info" xml:space="preserve">
+    <value>Esta página consulta la información básica y técnica de tu vehículo (ej. color, modelo, año) registrada en los servidores BMW.</value>
+  </data>
+  <data name="VehicleInfo_Download" xml:space="preserve">
+    <value>Descargar datos del vehículo</value>
+  </data>
+
+  <!-- ==================== CONTAINERS VIEW ==================== -->
+  <data name="Containers_Title" xml:space="preserve">
+    <value>Gestión de contenedores BMW &amp; Diagnóstico</value>
+  </data>
+  <data name="Containers_Section1_Header" xml:space="preserve">
+    <value>1. Contenedores actuales &amp; Limpieza (Resolución CU-124)</value>
+  </data>
+  <data name="Containers_GetActive" xml:space="preserve">
+    <value>Obtener contenedores activos</value>
+  </data>
+  <data name="Containers_DeleteAll" xml:space="preserve">
+    <value>Eliminar todos los contenedores</value>
+  </data>
+  <data name="Containers_Section2_Header" xml:space="preserve">
+    <value>2. Desplegar nuevos contenedores (Sincronización CSV)</value>
+  </data>
+  <data name="Containers_Section2_Info" xml:space="preserve">
+    <value>Desplegar contenedores de suscripción de datos en la API BMW leyendo el archivo CSV.</value>
+  </data>
+  <data name="Containers_Deploy" xml:space="preserve">
+    <value>Crear 10 contenedores con agrupaciones predeterminadas</value>
+  </data>
+  <data name="Containers_Section3_Header" xml:space="preserve">
+    <value>3. Smart Maintenance (Diagnóstico de neumáticos)</value>
+  </data>
+  <data name="Containers_GetSmartMaintenance" xml:space="preserve">
+    <value>Obtener diagnóstico Smart Maintenance</value>
+  </data>
+
+  <!-- ==================== SETTINGS VIEW ==================== -->
+  <data name="Settings_Title" xml:space="preserve">
+    <value>Configuración de la aplicación</value>
+  </data>
+  <data name="Settings_ThemeHeader" xml:space="preserve">
+    <value>Apariencia (Tema)</value>
+  </data>
+  <data name="Settings_ThemeDesc" xml:space="preserve">
+    <value>Elige el tema visual de la interfaz.</value>
+  </data>
+  <data name="Settings_ThemeLight" xml:space="preserve">
+    <value>☀️ Claro (Light)</value>
+  </data>
+  <data name="Settings_ThemeDark" xml:space="preserve">
+    <value>🌙 Oscuro (Dark)</value>
+  </data>
+  <data name="Settings_ThemeSystem" xml:space="preserve">
+    <value>💻 Predeterminado del sistema</value>
+  </data>
+  <data name="Settings_LanguageHeader" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="Settings_LanguageDesc" xml:space="preserve">
+    <value>Selecciona el idioma de visualización.</value>
+  </data>
+
+</root>
